@@ -3,59 +3,40 @@
 /// @param move+collision
 var xx, yy, c1, c2;
 
- 
+var mx = 0, my = 0,
 
 // If moving left, check LEFT collision
 if keys[LEFT_KEY] 
 {
 	dir = -1;
-
-	x = x - xspeed;
-	c2 = -1;
-	c1 = GetCollision(x, y);
-	if (y&$1f) > 0
-		{
-		c2 = GetCollision(x, y + 32);
-		}
-	if (c1 >= 0 || c2 >= 0)
-		{
-	    x = (x&$ffffffe0) + 32;
-		}    
+	mx = -1*xspeed;
 }
-else if keys[RIGHT_KEY]
+if keys[RIGHT_KEY]
 {
 	// Otherwise, check collision to the right
 	dir = 1;
 
-	x = x + xspeed;
-	c2 = -1;
-	c1 = GetCollision(x + 32, y);
-	if (y&$1f) > 0
+	mx = xspeed;
+}
+if keys[UP_KEY]
+{
+	my = -1*xspeed;
+}
+if keys[DOWN_KEY]
+{
+	my = xspeed;
+}
+
+//FOUR CORNER COLLISION CHECK
+var px = x+mx;
+var py = y+my;
+if not (GetCollision(px, py) or
+		GetCollision(px+pWidth, py) or
+		GetCollision(px, py+pHeight) or
+		GetCollision(px+pWidth, py+pHeight))
 		{
-		c2 = GetCollision(x + 32, y + 32);
+		x += mx;
+		y += my;
 		}
-	if (c1 >= 0 || c2 >= 0)
-	    {
-	    x = (x&$ffffffe0);
-	    }    
-}
-else if keys[UP_KEY]
-{
-	dir = 1;
-	y = y - xspeed;
-}
-else if keys[DOWN_KEY]
-{
-	dir = 1;
-	y = y + xspeed;
-}
-else
-{
-	// If standing still, don't animate
-	image_index = 0;
-}
-
-
-
-
+			
 
