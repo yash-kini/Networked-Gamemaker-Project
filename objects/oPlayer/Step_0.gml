@@ -28,8 +28,8 @@ if keys[DOWN_KEY]
 }
 
 //FOUR CORNER COLLISION CHECK
-var px = x+mx;
-var py = y+my;
+var px = x+mx+margin;
+var py = y+my+margin;
 if not (GetCollision(px, py) or
 		GetCollision(px+pWidth, py) or
 		GetCollision(px, py+pHeight) or
