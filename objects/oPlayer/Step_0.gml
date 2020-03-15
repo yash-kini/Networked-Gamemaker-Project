@@ -1,11 +1,10 @@
 /// @description  Process the player (move+collision)
 /// @function  Process the player 
 /// @param move+collision
-var xx, yy, c1, c2;
+var xx, yy
 
-var mx = 0, my = 0,
+var mx = 0, my = 0, //change in x and y positions
 
-// If moving left, check LEFT collision
 if keys[LEFT_KEY] 
 {
 	dir = -1;
@@ -13,9 +12,7 @@ if keys[LEFT_KEY]
 }
 if keys[RIGHT_KEY]
 {
-	// Otherwise, check collision to the right
 	dir = 1;
-
 	mx = xspeed;
 }
 if keys[UP_KEY]
