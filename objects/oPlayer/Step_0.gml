@@ -1,30 +1,36 @@
 /// @description  Process the player (move+collision)
 /// @function  Process the player 
 /// @param move+collision
-var xx, yy
+var xdir = 0, ydir = 0;
 
-var mx = 0, my = 0, //change in x and y positions
 
+//Interpret Input 
 if keys[LEFT_KEY] 
 {
-	dir = -1;
-	mx = -1*xspeed;
+	xdir = -1;
 }
 if keys[RIGHT_KEY]
 {
-	dir = 1;
-	mx = xspeed;
+	xdir = 1;
 }
 if keys[UP_KEY]
 {
-	my = -1*xspeed;
+	ydir = 1;
 }
 if keys[DOWN_KEY]
 {
-	my = xspeed;
+	ydir = -1;
 }
 
-//FOUR CORNER COLLISION CHECK
+//Calculate Direction and Movement 
+var mx = 0, my = 0, //change in x and y positions
+if(xdir != 0 or ydir != 0){
+	dir = point_direction(0, 0, xdir, ydir);
+	mx = xspeed*cos(degtorad(dir));
+	my = xspeed*sin(degtorad(dir));	
+}
+
+//Four Corner Collision Check
 var px = x+mx+margin;
 var py = y+my+margin;
 if not (GetCollision(px, py) or
@@ -35,5 +41,3 @@ if not (GetCollision(px, py) or
 		x += mx;
 		y += my;
 		}
-			
-
