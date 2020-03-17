@@ -151,6 +151,14 @@
             }
         },
         {
+            "Key": "2fae2ca5-691b-4234-a3ad-d247d4749d04",
+            "Value": {
+                "id": "57bd8d78-0944-46f5-ba57-decc89438438",
+                "resourcePath": "scripts\\SendMouse\\SendMouse.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "32257d9a-b0d7-4e4f-8cdd-497d6649f7b5",
             "Value": {
                 "id": "866c2f65-86e5-474e-9101-12c83a09c1e2",
@@ -632,6 +640,7 @@
         "120bcb7b-10a9-4207-ba84-2d76a73b6b17",
         "67d5f270-536c-42bc-a763-4a8674bd7a34",
         "743a8517-a359-4e1c-b5d8-122731d36715",
+        "2fae2ca5-691b-4234-a3ad-d247d4749d04",
         "40de3b1c-2542-469f-af62-faa851453d23",
         "a82b0bab-8d3d-43be-9115-db7f4917ead2"
     ],

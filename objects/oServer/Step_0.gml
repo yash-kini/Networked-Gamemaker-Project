@@ -22,6 +22,8 @@ with(oPlayer)
     buffer_write(global.player_buffer, buffer_s16, image_index);
     buffer_write(global.player_buffer, buffer_s32, image_blend);
     buffer_write(global.player_buffer, buffer_string, PlayerName);
+	buffer_write(global.player_buffer, buffer_s16, target_x);
+	buffer_write(global.player_buffer, buffer_s16, target_y); 
 	}
 // Now send all baddies
 with(oBaddie)
