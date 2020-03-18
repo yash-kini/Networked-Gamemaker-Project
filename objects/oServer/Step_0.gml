@@ -8,8 +8,9 @@ if count > 0
 global.player_buffer = player_buffer;
 // Reset buffer to start - Networking ALWAYS reads from the START of the buffer
 buffer_seek(player_buffer, buffer_seek_start, 0);
-// Total number of sprites (players+baddies)
-buffer_write(player_buffer, buffer_u32, global.PlayerTotal + global.BaddieCount);
+// Total number of sprites (players*2)
+// This is a temporary fix, create should create better way to do this
+buffer_write(player_buffer, buffer_u32, global.PlayerTotal*2);
 // Dummy player x,y...will fill in later. This allows the client to follow themselves in a scrolling level.
 buffer_write(global.player_buffer, buffer_s16, 0);
 buffer_write(global.player_buffer, buffer_s16, 0);
@@ -23,17 +24,22 @@ with(oPlayer)
     buffer_write(global.player_buffer, buffer_s32, image_blend);
     buffer_write(global.player_buffer, buffer_string, PlayerName);
 	buffer_write(global.player_buffer, buffer_s16, target_x);
-	buffer_write(global.player_buffer, buffer_s16, target_y); 
+	buffer_write(global.player_buffer, buffer_s16, target_y);
+	buffer_write(global.player_buffer, buffer_s16, image_angle);
 	}
-// Now send all baddies
-with(oBaddie)
+// Now send all pistols
+with(oPistol)
 	{
+	show_debug_message("PISTOL SENT"+string(x));
     buffer_write(global.player_buffer, buffer_s16, x);
     buffer_write(global.player_buffer, buffer_s16, y);
     buffer_write(global.player_buffer, buffer_s16, sprite_index);
     buffer_write(global.player_buffer, buffer_s16, image_index);
     buffer_write(global.player_buffer, buffer_s32, image_blend);
     buffer_write(global.player_buffer, buffer_string, "");
+	buffer_write(global.player_buffer, buffer_s16, 0);
+	buffer_write(global.player_buffer, buffer_s16, 0); 
+	buffer_write(global.player_buffer, buffer_s16, image_angle);
 	}
 var buffer_size = buffer_tell(player_buffer);
 // Now send all data... to all clients

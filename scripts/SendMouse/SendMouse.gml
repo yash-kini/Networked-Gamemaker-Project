@@ -6,7 +6,7 @@
 // Move to start of buffer. Networking ALWAYS takes the data from the START of a buffer.
 buffer_seek(buff, buffer_seek_start, 0);
 
-// Write the command, the key and the UP/DOWN state into the buffer
+// Write the command
 buffer_write(buff, buffer_s16, MOUSE_CMD);
 buffer_write(buff, buffer_s16, argument0);
 buffer_write(buff, buffer_s16, argument1);
