@@ -29,4 +29,7 @@ game_restart();
 SendName(PlayerName);
 alarm[0] = room_speed * 2;
 
-
+//Mouse input for shooting
+//Previous mouse x & y
+p_mouse_x = 0;
+p_mouse_y = 0;

@@ -53,6 +53,15 @@ else if cmd == PING_CMD
 	{
     // keep alive - ignore it
 	}
+else if cmd == MOUSE_CMD
+	{    
+	//read mouse x position
+    var m_x = buffer_read(buff, buffer_s16 );
+    //read mouse y position
+    var m_y = buffer_read(buff, buffer_s16 );
+	inst.target_x = m_x;
+	inst.target_y = m_y;
+	}
 
 
 

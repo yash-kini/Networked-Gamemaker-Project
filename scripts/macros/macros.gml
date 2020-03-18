@@ -11,3 +11,4 @@
 #macro KEY_CMD 0
 #macro NAME_CMD 1
 #macro PING_CMD 2
+#macro MOUSE_CMD 3

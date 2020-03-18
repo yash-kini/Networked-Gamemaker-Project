@@ -1,10 +1,9 @@
 /// @description  Process the player (move+collision)
 /// @function  Process the player 
 /// @param move+collision
+
+//Interpret Input
 var xdir = 0, ydir = 0;
-
-
-//Interpret Input 
 if keys[LEFT_KEY] 
 {
 	xdir = -1;
@@ -41,3 +40,8 @@ if not (GetCollision(px, py) or
 		x += mx;
 		y += my;
 		}
+		
+//Update Gun Position
+gun.image_angle = point_direction(x, y, target_x, target_y);
+gun.x = x+16;
+gun.y = y+16;
