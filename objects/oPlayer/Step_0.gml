@@ -21,6 +21,7 @@ if keys[DOWN_KEY]
 	ydir = -1;
 }
 
+
 //Calculate Direction and Movement 
 var mx = 0, my = 0, //change in x and y positions
 if(xdir != 0 or ydir != 0){
@@ -45,3 +46,13 @@ if not (GetCollision(px, py) or
 gun.image_angle = point_direction(x, y, target_x, target_y);
 gun.x = x+16;
 gun.y = y+16;
+
+
+//Shooting
+if keys[LEFT_MOUSE]
+{
+	inst = instance_create_depth(x, y, 0, oBullet);
+	inst.speed = 10;
+	inst.direction = point_direction(x, y, target_x, target_y);
+	inst.visible = false; //bullet will be rendered by draw function
+}

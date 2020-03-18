@@ -27,11 +27,15 @@ if cmd == KEY_CMD
 		}
 	else if key == vk_up
 		{
-			key = UP_KEY
+			key = UP_KEY;
 		}
 	else if key == vk_down
 		{
-			key = DOWN_KEY
+			key = DOWN_KEY;
+		}
+	else if key == mb_left
+		{
+			key = LEFT_MOUSE;
 		}
     // translate updown into a bool for the player array       
     if updown == 0
@@ -53,7 +57,7 @@ else if cmd == PING_CMD
 	{
     // keep alive - ignore it
 	}
-else if cmd == MOUSE_CMD
+else if cmd == MOUSE_CMD //mouse buttons are listed as key commands
 	{    
 	//read mouse x position
     var m_x = buffer_read(buff, buffer_s16 );

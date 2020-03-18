@@ -7,6 +7,7 @@
 #macro RIGHT_KEY 1
 #macro UP_KEY 2
 #macro DOWN_KEY 3
+#macro LEFT_MOUSE 4
 
 #macro KEY_CMD 0
 #macro NAME_CMD 1

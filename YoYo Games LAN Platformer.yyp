@@ -415,6 +415,14 @@
             }
         },
         {
+            "Key": "a04d437e-4194-43cc-987f-a13a2ff4de5d",
+            "Value": {
+                "id": "b8d43165-2331-47fb-a98e-60cd53b91d85",
+                "resourcePath": "objects\\oBullet\\oBullet.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "a6c602c7-ab0f-4b99-a35a-a59f6f3790fd",
             "Value": {
                 "id": "32bc4eb2-33a8-45c9-8959-19e3e8184b3e",
