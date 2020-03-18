@@ -16,8 +16,6 @@ sp = allsprites[| index++];
 spindex = allsprites[| index++];
 col = allsprites[| index++];
 name = allsprites[| index++];
-target_x = allsprites[| index++];
-target_y = allsprites[| index++];
 rot = allsprites[| index++];
 
 

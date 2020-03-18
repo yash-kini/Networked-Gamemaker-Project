@@ -24,8 +24,6 @@ switch (global.NetworkState)
         ds_list_add(allsprites, buffer_read(buff,buffer_s16));     //image_index
         ds_list_add(allsprites, buffer_read(buff,buffer_s32));     //image_blend        
         ds_list_add(allsprites, buffer_read(buff,buffer_string));  //player name
-		ds_list_add(allsprites, buffer_read(buff,buffer_s16));	   //target_x
-		ds_list_add(allsprites, buffer_read(buff,buffer_s16));	   //target_y
 		ds_list_add(allsprites, buffer_read(buff,buffer_s16));	   //rotation
         }    
     }
