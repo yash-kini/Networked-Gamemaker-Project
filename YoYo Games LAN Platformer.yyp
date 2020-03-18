@@ -599,6 +599,14 @@
             }
         },
         {
+            "Key": "fe01551f-5a1e-4c4e-8bd4-301fb313d057",
+            "Value": {
+                "id": "94b81124-555e-4c6e-beee-27184f3ad631",
+                "resourcePath": "objects\\oPistol\\oPistol.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "ff1c3d6e-336f-4048-960a-b2c178aa500c",
             "Value": {
                 "id": "76a43aeb-eff8-41ef-bb0b-4198057d06eb",
