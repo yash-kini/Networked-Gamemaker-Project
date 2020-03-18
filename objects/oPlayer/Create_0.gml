@@ -18,12 +18,14 @@ keys[i] = false;
 }
 
 // basic movement setup
-xspeed = 4;
+xspeed = 6;
 
 //create pistol instance
 gun = instance_create_depth(x, y, 0, oPistol);
 gun.visible = false; // gun will be rendered by oClient - draw
-global.PlayerTotal++;        
 
+global.PlayerTotal++;
 
-
+//Health Setup
+hp = 10;
+alive = true;

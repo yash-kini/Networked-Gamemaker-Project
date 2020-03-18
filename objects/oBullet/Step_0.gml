@@ -1,28 +1,17 @@
-/// @description Insert description here
+/// @description Check collision
 // You can write your code in this editor
-/*
-if (place_meeting(x,y, oWall)) {
+
+if (GetCollision(x, y)) {
 	instance_destroy();
 }
-if (person_type = oPlayer) {
-	if (place_meeting(x, y, oEnemy)){
-		show_debug_message("enemy hit");
-		e = instance_position( x, y, oEnemy );
-		if (instance_exists(e)){
-			e.hp -= 1;
-		}
-		instance_destroy();
-	}
-} 
-if (person_type = oEnemy) { 
-	if (place_meeting(x, y, oPlayer)) {
 
-		p = instance_position( x, y, oPlayer);
-		if (instance_exists(p)) {
-			p.hp -= 1;
-			show_debug_message(string(p.hp));
-		}
+var _inst = instance_place(x, y, oPlayer);
+
+if (_inst != noone and _inst.id != shooter and alive) {
+	if (instance_exists(_inst) and _inst.alive){
+		_inst.hp -= 1;
+		show_debug_message("Player Health: "+string(_inst.hp))
 		instance_destroy();
 	}
+
 }
-*/

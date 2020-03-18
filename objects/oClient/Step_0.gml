@@ -8,7 +8,6 @@ if (mouse_x != p_mouse_x or
 
 if (mouse_check_button_pressed(mb_left)){
 	SendKey(mb_left, 1);
-}
-if (mouse_check_button_released(mb_left)){
-	SendKey(mb_left, 0);
+	alarm_set(1, 1);
+
 }

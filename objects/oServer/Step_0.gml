@@ -10,7 +10,7 @@ global.player_buffer = player_buffer;
 buffer_seek(player_buffer, buffer_seek_start, 0);
 // Total number of sprites (players*2)
 // This is a temporary fix, create should create better way to do this
-buffer_write(player_buffer, buffer_u32, global.PlayerTotal*2 + global.BulletsTotal);
+buffer_write(player_buffer, buffer_u32, global.PlayerTotal + global.GunTotal + global.BulletsTotal);
 // Dummy player x,y...will fill in later. This allows the client to follow themselves in a scrolling level.
 buffer_write(global.player_buffer, buffer_s16, 0);
 buffer_write(global.player_buffer, buffer_s16, 0);
@@ -24,6 +24,7 @@ with(oPlayer)
     buffer_write(global.player_buffer, buffer_s32, image_blend);
     buffer_write(global.player_buffer, buffer_string, PlayerName);
 	buffer_write(global.player_buffer, buffer_s16, image_angle);
+	buffer_write(global.player_buffer, buffer_bool, alive);
 	}
 // Now send all pistols
 with(oPistol)
@@ -35,6 +36,7 @@ with(oPistol)
     buffer_write(global.player_buffer, buffer_s32, image_blend);
     buffer_write(global.player_buffer, buffer_string, "");
 	buffer_write(global.player_buffer, buffer_s16, image_angle);
+	buffer_write(global.player_buffer, buffer_bool, alive);
 	}
 // Now send all bullets
 with(oBullet)
@@ -46,6 +48,7 @@ with(oBullet)
     buffer_write(global.player_buffer, buffer_s32, image_blend);
     buffer_write(global.player_buffer, buffer_string, "");
 	buffer_write(global.player_buffer, buffer_s16, image_angle);
+	buffer_write(global.player_buffer, buffer_bool, alive);
 	}
 var buffer_size = buffer_tell(player_buffer);
 // Now send all data... to all clients

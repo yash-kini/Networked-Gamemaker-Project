@@ -10,27 +10,21 @@ var xx, yy, sp, spindex, col;
 
 for(var i = 0; i < sprites; i++;)
 {
-xx = allsprites[| index++];
-yy = allsprites[| index++];
-sp = allsprites[| index++];
-spindex = allsprites[| index++];
-col = allsprites[| index++];
-name = allsprites[| index++];
-rot = allsprites[| index++];
-
-
-if(sPistol == sp){
-	draw_sprite_ext(sp, spindex, xx, yy, 1, 1, rot, col, 1); 
-}
-else {
-	draw_sprite_ext(sp, spindex, xx, yy, 1, 1, 0, col, 1); 
-}
-
-
-draw_set_color(c_white);
-draw_set_font(fName);
-draw_set_halign(fa_center);
-draw_text(xx + 16, yy - 20, name);
+	xx = allsprites[| index++];
+	yy = allsprites[| index++];
+	sp = allsprites[| index++];
+	spindex = allsprites[| index++];
+	col = allsprites[| index++];
+	name = allsprites[| index++];
+	rot = allsprites[| index++];
+	vis = allsprites[| index++];
+	if(vis){
+		draw_sprite_ext(sp, spindex, xx, yy, 1, 1, rot, col, 1); 
+	}
+	draw_set_color(c_white);
+	draw_set_font(fName);
+	draw_set_halign(fa_center);
+	draw_text(xx + 16, yy - 20, name);
 }
 
 

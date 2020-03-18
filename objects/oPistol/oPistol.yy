@@ -4,7 +4,26 @@
     "mvc": "1.0",
     "name": "oPistol",
     "eventList": [
-        
+        {
+            "id": "4da1bc8e-a42f-4060-a17b-6668aa81ffe4",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 0,
+            "eventtype": 0,
+            "m_owner": "fe01551f-5a1e-4c4e-8bd4-301fb313d057"
+        },
+        {
+            "id": "da4f210c-b8fa-436d-8857-7fb929d33947",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 0,
+            "eventtype": 12,
+            "m_owner": "fe01551f-5a1e-4c4e-8bd4-301fb313d057"
+        }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": null,

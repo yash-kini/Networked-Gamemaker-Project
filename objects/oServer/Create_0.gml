@@ -26,7 +26,7 @@ colourindex = 0;
 // Total number of players and baddies connected
 global.PlayerTotal = 0;
 global.BulletsTotal = 0;
-
+global.GunTotal = 0;
 
 // Create our server. Server creation may fail if there is already a server running. If it does fail, delete eveything and kill this instance
 broadcast_buffer = buffer_create(32, buffer_fixed, 1);
@@ -48,7 +48,4 @@ instance_destroy();
 }
 
 // Setup a timer so we can broadcast the server IP out to local clients looking...
-alarm[0] = room_speed; 
-
-
-
+alarm[0] = room_speed;
