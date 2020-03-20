@@ -9,8 +9,8 @@ var yindex = 40;
 var count = ds_list_size(global.serverlist);
 for(var i = 0; i < count; i++;)
 {
-draw_text(10, yindex, string(global.serverlist[| i]) + "  " + string(global.servernames[| i])+ "'s server");
-yindex += 30;
+	draw_text(10, yindex, string(global.serverlist[| i]) + "  " + string(global.servernames[| i])+ "'s server");
+	yindex += 30;
 }
 
 

@@ -12,5 +12,6 @@ global.connectip = "127.0.0.1";
 network_destroy(global.broadcast_server);
 global.broadcast_server = -1;
 room_goto(Level1);
+instance_create_depth(0, 0, 0, oLobby);
 }
 
