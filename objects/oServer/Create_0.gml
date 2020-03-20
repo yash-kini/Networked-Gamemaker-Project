@@ -1,5 +1,5 @@
 /// @description  Create server and initialise map
-
+show_debug_message("Server is created");
 global.counter = 0;
 image_blend = c_red;
 global.haveserver = true;
@@ -23,10 +23,12 @@ ColourArray[14] = $ff8080;
 ColourArray[15] = $80ff80;
 colourindex = 0;
 
-// Total number of players and baddies connected
+// Total number of players, bullets, and guns
 global.PlayerTotal = 0;
 global.BulletsTotal = 0;
-global.GunTotal = 0;
+global.GunTotal = 0;	
+
+
 
 // Create our server. Server creation may fail if there is already a server running. If it does fail, delete eveything and kill this instance
 broadcast_buffer = buffer_create(32, buffer_fixed, 1);
@@ -38,13 +40,13 @@ socketlist = ds_list_create();
 server = network_create_server(global.ServerType, 6510, 32);
 if server < 0
 {    
-// If theres already a server running, shut down and delete.
-global.haveserver = false;
-ds_map_destroy(Clients);
-ds_list_destroy(socketlist);
-buffer_delete(broadcast_buffer);
-buffer_delete(player_buffer);
-instance_destroy();
+	// If theres already a server running, shut down and delete.
+	global.haveserver = false;
+	ds_map_destroy(Clients);
+	ds_list_destroy(socketlist);
+	buffer_delete(broadcast_buffer);
+	buffer_delete(player_buffer);
+	instance_destroy();
 }
 
 // Setup a timer so we can broadcast the server IP out to local clients looking...

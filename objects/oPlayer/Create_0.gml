@@ -1,4 +1,6 @@
 /// @description  Initialise the player and map
+show_debug_message("Player is created");
+
 CreateCollisionMap();
 
 sprite_index = walk_right;

@@ -8,8 +8,7 @@ if count > 0
 global.player_buffer = player_buffer;
 // Reset buffer to start - Networking ALWAYS reads from the START of the buffer
 buffer_seek(player_buffer, buffer_seek_start, 0);
-// Total number of sprites (players*2)
-// This is a temporary fix, create should create better way to do this
+// Total number of sprites to render
 buffer_write(player_buffer, buffer_u32, global.PlayerTotal + global.GunTotal + global.BulletsTotal);
 // Dummy player x,y...will fill in later. This allows the client to follow themselves in a scrolling level.
 buffer_write(global.player_buffer, buffer_s16, 0);
