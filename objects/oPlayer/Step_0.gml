@@ -11,19 +11,19 @@ if (hp < 0){
 var xdir = 0, ydir = 0;
 if keys[LEFT_KEY] 
 {
-	xdir = -1;
+	xdir += -1;
 }
 if keys[RIGHT_KEY]
 {
-	xdir = 1;
+	xdir += 1;
 }
 if keys[UP_KEY]
 {
-	ydir = 1;
+	ydir += 1;
 }
 if keys[DOWN_KEY]
 {
-	ydir = -1;
+	ydir += -1;
 }
 
 //Calculate Direction and Movement 
