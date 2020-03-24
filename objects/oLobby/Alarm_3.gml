@@ -8,4 +8,7 @@ for (i = 0; i < instance_number(oPlayer); i += 1)
    players[i] = instance_find(oPlayer,i);
    }
    
-players[0].isTraitor = true;
+   
+//only assigns 1 traitor
+ran = random_range(0, instance_number(oPlayer) - 1);
+players[ran].isTraitor = true;
