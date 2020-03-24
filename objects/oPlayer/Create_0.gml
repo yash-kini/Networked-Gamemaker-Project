@@ -29,3 +29,6 @@ global.PlayerTotal++;
 //Health Setup
 hp = 10;
 alive = true;
+
+//game rules
+isTraitor = false;

@@ -46,15 +46,10 @@ if not (GetCollision(px, py) or
 		y += my;
 		}
 
-
-
 //Update Gun Position
 gun.image_angle = point_direction(x, y, target_x, target_y);
 gun.x = x+16;
 gun.y = y+16;
-
-
-
 
 //Shooting
 if keys[LEFT_MOUSE]

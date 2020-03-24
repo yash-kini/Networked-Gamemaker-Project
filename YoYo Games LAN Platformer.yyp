@@ -47,6 +47,14 @@
             }
         },
         {
+            "Key": "032b5922-5641-45e0-a855-5f93353724b9",
+            "Value": {
+                "id": "d23ab197-cd57-4a41-a2a5-25031947b8cd",
+                "resourcePath": "fonts\\mohave_small\\mohave_small.yy",
+                "resourceType": "GMFont"
+            }
+        },
+        {
             "Key": "04a03f59-50cb-4200-97a1-dfe5eb3f4ee4",
             "Value": {
                 "id": "95855bd0-d94b-4de3-86d8-d53574e04e5a",

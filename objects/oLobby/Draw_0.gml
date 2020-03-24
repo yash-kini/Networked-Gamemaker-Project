@@ -11,6 +11,7 @@ with(oPlayer){
 	ds_list_add(other.player_names, PlayerName);
 }
 if (ds_list_size(player_names) > 0){
+	isHost = true;
 	draw_text(80, 10, "Connected Players - Press Enter to start game");
 	draw_line(80, 30, room_width - 10, 30);
 }

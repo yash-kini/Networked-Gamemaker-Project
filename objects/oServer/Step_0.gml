@@ -8,12 +8,13 @@ if count > 0
 global.player_buffer = player_buffer;
 // Reset buffer to start - Networking ALWAYS reads from the START of the buffer
 buffer_seek(player_buffer, buffer_seek_start, 0);
-// Total number of sprites (players*2)
-// This is a temporary fix, create should create better way to do this
+//Total number of sprite to send
 buffer_write(player_buffer, buffer_u32, global.PlayerTotal + global.GunTotal + global.BulletsTotal);
 // Dummy player x,y...will fill in later. This allows the client to follow themselves in a scrolling level.
 buffer_write(global.player_buffer, buffer_s16, 0);
 buffer_write(global.player_buffer, buffer_s16, 0);
+// Dummy traitor status, will be filled in the for loop at the bottom of this file
+buffer_write(global.player_buffer, buffer_bool, false);
 // All attached players
 with(oPlayer)
 	{
@@ -62,6 +63,8 @@ for(var i = 0; i < count; i++;)
     var inst = ds_map_find_value( Clients, sock);
     buffer_write(global.player_buffer, buffer_s16, inst.x);
     buffer_write(global.player_buffer, buffer_s16, inst.y);
+	// Send isTraitor status to client
+	buffer_write(global.player_buffer, buffer_bool, inst.isTraitor);
     // Send data to client
     network_send_packet( sock,player_buffer, buffer_size);
     }

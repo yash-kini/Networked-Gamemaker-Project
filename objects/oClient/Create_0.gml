@@ -1,6 +1,7 @@
 /// @description  Initialise the client
 clientx = 64;   // player start X and Y
 clienty = 192;
+client_isTraitor = false;
 PlayerName = global.ServerName;   // get the name that was selected (it's a server OR player name)
 
 // Create a buffer for the network messages
