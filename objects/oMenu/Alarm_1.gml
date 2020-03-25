@@ -8,7 +8,7 @@ show_debug_message("Cant create server");
 }
 else
 {
-global.connectip = "127.0.0.1";
+
 network_destroy(global.broadcast_server);
 global.broadcast_server = -1;
 room_goto(Level1);

@@ -279,6 +279,14 @@
             }
         },
         {
+            "Key": "4e976901-130a-4305-9a4b-e4c496279fec",
+            "Value": {
+                "id": "f0a4e330-f441-4233-9dcb-543f5f24fb3e",
+                "resourcePath": "objects\\oIPGet\\oIPGet.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "545d437e-2fa5-4886-8162-1487c869933a",
             "Value": {
                 "id": "f85cb41c-8ea1-443a-a214-e209db7c3b69",

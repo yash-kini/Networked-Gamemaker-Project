@@ -1,5 +1,5 @@
 global.Server = -1;
-global.connectip = "127.0.0.1";
+global.connectip = "NULL";
 global.InitObject = id;
 global.haveserver = false;
 global.ServerType = network_socket_tcp;
@@ -14,4 +14,6 @@ global.servernames = ds_list_create();
 // Create a server and listen on our broadcast port....
 global.broadcast_server = network_create_server(network_socket_udp, 6511, 100);
 
-
+//get local ip
+//set global.connectip
+instance_create_depth(0, 0, 0, oIPGet);
