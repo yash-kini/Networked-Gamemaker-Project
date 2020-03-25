@@ -25,9 +25,9 @@ gun = instance_create_depth(x, y, 0, oPistol);
 gun.visible = false; // gun will be rendered by oClient - draw
 
 global.PlayerTotal++;
-
+global.playerHealth = 4;
 //Health Setup
-hp = 4;
+hp = global.playerHealth;
 alive = true;
 
 //game rules
