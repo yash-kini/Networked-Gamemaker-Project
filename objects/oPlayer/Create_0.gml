@@ -27,7 +27,7 @@ gun.visible = false; // gun will be rendered by oClient - draw
 global.PlayerTotal++;
 
 //Health Setup
-hp = 10;
+hp = 4;
 alive = true;
 
 //game rules
