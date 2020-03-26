@@ -13,7 +13,7 @@ var sock = async_load[? "id"];
 var inst = Clients[? sock];
 // Is this a KEY command?
 // Don't allow player to move or shoot if game has not started
-if (cmd == KEY_CMD and global.GameStart != 0)
+if (cmd == KEY_CMD and global.GameState != LOBBY)
 	{
 	// Read the key that was sent
 	var key = buffer_read(buff, buffer_s16 );
@@ -36,7 +36,7 @@ if (cmd == KEY_CMD and global.GameStart != 0)
 		{
 			key = DOWN_KEY;
 		}
-	else if (key == mb_left and global.GameStart == 2)
+	else if (key == mb_left and global.GameState == GAME)
 		{
 			key = LEFT_MOUSE;
 		}

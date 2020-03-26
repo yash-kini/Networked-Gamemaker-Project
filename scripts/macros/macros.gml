@@ -13,3 +13,8 @@
 #macro NAME_CMD 1
 #macro PING_CMD 2
 #macro MOUSE_CMD 3
+
+#macro LOBBY 0
+#macro ASSIGN 1
+#macro GAME 2
+#macro END 3

@@ -1,6 +1,6 @@
 /// @description assign traitors 
 show_debug_message("Assign Traitors");
-global.GameStart = 2;
+global.GameState = GAME;
 
 var i;
 for (i = 0; i < instance_number(oPlayer); i += 1)
