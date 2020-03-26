@@ -1,4 +1,4 @@
-// @description Gets local IP from host to set global.connectip
+///@description Gets local IP from host to set global.connectip
 randomize();
 var port = irandom_range(49152,65535);
 var host = network_create_server(network_socket_udp, port, 5);
