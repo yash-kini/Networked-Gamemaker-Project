@@ -6,10 +6,3 @@ global.GameState = LOBBY;
 // 2 = player's can move and shoot
 isHost = false;
 
-//reset all player status
-with(oPlayer){
-	alive = true;
-	gun.alive = true;
-	isTraitor = false;
-	hp = global.playerHealth;
-}

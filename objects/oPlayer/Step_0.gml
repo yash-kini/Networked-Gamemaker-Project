@@ -2,7 +2,7 @@
 /// @function  Process the player 
 /// @param move+collision
 
-if (hp < 0 and alive){
+if (hp <= 0 and alive){
 	alive = false;
 	gun.alive = false;
 	alarm_set(0,5);

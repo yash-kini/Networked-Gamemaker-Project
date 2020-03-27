@@ -18,13 +18,19 @@ for(var i = 0; i < sprites; i++;)
 	name = allsprites[| index++];
 	rot = allsprites[| index++];
 	vis = allsprites[| index++];
+	hp = allsprites[| index++];
+	
 	if(vis){
 		draw_sprite_ext(sp, spindex, xx, yy, 1, 1, rot, col, 1); 
 	}
-	draw_set_color(c_white);
-	draw_set_font(fName);
-	draw_set_halign(fa_center);
-	draw_text(xx + 16, yy - 20, name);
+	if(string_length(name) != 0){ //Assume players have a name
+		draw_set_color(c_white);
+		draw_set_font(fName);
+		draw_set_halign(fa_center);
+		draw_text(xx + 16, yy - 20, name);
+		
+		draw_healthbar(xx, yy-8, xx+32, yy-4, (hp/4)*100 , c_black, c_red, c_lime, 0, true, true);
+	}
 }
 
 

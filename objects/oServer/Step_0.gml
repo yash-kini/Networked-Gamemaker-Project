@@ -28,6 +28,7 @@ with(oPlayer)
     buffer_write(global.player_buffer, buffer_string, PlayerName);
 	buffer_write(global.player_buffer, buffer_s16, image_angle);
 	buffer_write(global.player_buffer, buffer_bool, alive);
+	buffer_write(global.player_buffer, buffer_s16, hp);
 	}
 // Now send all pistols
 with(oPistol)
@@ -40,6 +41,7 @@ with(oPistol)
     buffer_write(global.player_buffer, buffer_string, "");
 	buffer_write(global.player_buffer, buffer_s16, image_angle);
 	buffer_write(global.player_buffer, buffer_bool, alive);
+	buffer_write(global.player_buffer, buffer_s16, 0);
 	}
 // Now send all bullets
 with(oBullet)
@@ -52,6 +54,7 @@ with(oBullet)
     buffer_write(global.player_buffer, buffer_string, "");
 	buffer_write(global.player_buffer, buffer_s16, image_angle);
 	buffer_write(global.player_buffer, buffer_bool, alive);
+	buffer_write(global.player_buffer, buffer_s16, 0);
 	}
 var buffer_size = buffer_tell(player_buffer);
 // Now send all data... to all clients

@@ -31,6 +31,7 @@ switch (global.NetworkState)
         ds_list_add(allsprites, buffer_read(buff,buffer_string));  //player name
 		ds_list_add(allsprites, buffer_read(buff,buffer_s16));	   //rotation
 		ds_list_add(allsprites, buffer_read(buff,buffer_bool));	   //visible
+		ds_list_add(allsprites, buffer_read(buff, buffer_s16));	   //hp
         }
     }
 }
