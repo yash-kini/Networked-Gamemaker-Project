@@ -15,6 +15,8 @@ buffer_write(global.player_buffer, buffer_s16, 0);
 buffer_write(global.player_buffer, buffer_s16, 0);
 // Dummy traitor status, will be filled in the for loop at the bottom of this file
 buffer_write(global.player_buffer, buffer_bool, false);
+// Send gamestate to player
+buffer_write(global.player_buffer, buffer_s16, global.GameState);
 // All attached players
 with(oPlayer)
 	{
@@ -65,6 +67,8 @@ for(var i = 0; i < count; i++;)
     buffer_write(global.player_buffer, buffer_s16, inst.y);
 	// Send isTraitor status to client
 	buffer_write(global.player_buffer, buffer_bool, inst.isTraitor);
+	// Send gamestate to player
+	buffer_write(global.player_buffer, buffer_s16, global.GameState);
     // Send data to client
     network_send_packet( sock,player_buffer, buffer_size);
     }

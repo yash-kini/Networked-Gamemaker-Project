@@ -11,11 +11,14 @@ switch (global.NetworkState)
     var buff = ds_map_find_value(async_load, "buffer");
     // Get number of sprites sent
     sprites = buffer_read(buff, buffer_u32); 
+
     // Read out OUR location (allow scrolling maps)
     clientx = buffer_read(buff,buffer_s16);     //x
     clienty = buffer_read(buff,buffer_s16);     //y
 	// Read out OUR traitor status
 	client_isTraitor = buffer_read(buff, buffer_bool);     //isTraitor
+	// Get state of game
+	gamestate = buffer_read(buff, buffer_s16);
     // Now clear the render list, and start filling it up with NEW data!
     ds_list_clear(allsprites);
     for(var i = 0; i < sprites; i++;)
